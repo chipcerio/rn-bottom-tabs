@@ -1,14 +1,13 @@
-import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { createDrawerNavigator } from 'react-navigation';
+import Profile from './Profile.container';
+import Settings from './Settings.container';
+import Support from './Support.container';
 
-export class DrawerContainer extends Component {
-  render() {
-    return (
-      <View>
-        <Text> Drawer </Text>
-      </View>
-    );
-  }
-}
+// https://github.com/react-navigation/react-navigation/blob/master/examples/NavigationPlayground/app/Drawer.tsx
+const DrawerLayout = createDrawerNavigator({
+  Profile,
+  Settings,
+  Support,
+});
 
-export default DrawerContainer;
+export default DrawerLayout;
