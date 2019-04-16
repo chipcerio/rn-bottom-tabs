@@ -1,11 +1,11 @@
 import { createSwitchNavigator, createStackNavigator, createAppContainer } from 'react-navigation';
 import LoginScreen from '../screens/Auth/Login.container';
-import FeedsScreen from '../screens/Feeds/Feeds.container';
 import AuthLoadingScreen from '../screens/Auth/AuthLoading/AuthLoading.container';
+import HomeTabNavigator from '../screens/Home/TabNavigator';
 
 const AppStack = createStackNavigator({
-  Login: LoginScreen,
-  Feeds: FeedsScreen,
+  // Login: LoginScreen,
+  Home: HomeTabNavigator,
 });
 
 const AuthStack = createStackNavigator({
